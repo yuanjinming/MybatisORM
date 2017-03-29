@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.mapper.PmsUserMapper">
+  <resultMap id="BaseResultMap" type="dao.model.PmsUser">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="user_no" jdbcType="VARCHAR" property="userNo" />
+    <result column="user_type" jdbcType="VARCHAR" property="userType" />
+    <result column="main_user_id" jdbcType="BIGINT" property="mainUserId" />
+    <result column="user_pwd" jdbcType="VARCHAR" property="userPwd" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="mobile_no" jdbcType="VARCHAR" property="mobileNo" />
+    <result column="email" jdbcType="VARBINARY" property="email" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="last_login_time" jdbcType="TIMESTAMP" property="lastLoginTime" />
+    <result column="is_changed_pwd" jdbcType="INTEGER" property="isChangedPwd" />
+    <result column="pwd_error_count" jdbcType="INTEGER" property="pwdErrorCount" />
+    <result column="pwd_error_time" jdbcType="TIMESTAMP" property="pwdErrorTime" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, version, create_time, user_no, user_type, main_user_id, user_pwd, user_name, 
+    mobile_no, email, status, last_login_time, is_changed_pwd, pwd_error_count, pwd_error_time, 
+    remark
+  </sql>
+  <insert id="add">
+    insert into edu_edmo_pms_user (id, version, create_time, 
+      user_no, user_type, main_user_id, 
+      user_pwd, user_name, mobile_no, 
+      email, status, last_login_time, 
+      is_changed_pwd, pwd_error_count, 
+      pwd_error_time, remark)
+    values 
+    <foreach collection="list" index="index" item="item" separator=",">
+       (#{item.id,jdbcType=BIGINT}, #{item.version,jdbcType=INTEGER}, #{item.createTime,jdbcType=TIMESTAMP}, 
+        #{item.userNo,jdbcType=VARCHAR}, #{item.userType,jdbcType=VARCHAR}, #{item.mainUserId,jdbcType=BIGINT}, 
+        #{item.userPwd,jdbcType=VARCHAR}, #{item.userName,jdbcType=VARCHAR}, #{item.mobileNo,jdbcType=VARCHAR}, 
+        #{item.email,jdbcType=VARBINARY}, #{item.status,jdbcType=INTEGER}, #{item.lastLoginTime,jdbcType=TIMESTAMP}, 
+        #{item.isChangedPwd,jdbcType=INTEGER}, #{item.pwdErrorCount,jdbcType=INTEGER}, 
+        #{item.pwdErrorTime,jdbcType=TIMESTAMP}, #{item.remark,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+  <delete id="delete">
+    delete from edu_edmo_pms_user
+    where id in 
+    <foreach close=")" collection="list" index="index" item="id" open="(" separator=",">
+      #{id}
+    </foreach>
+  </delete>
+  <delete id="deleteBy">
+    delete from edu_edmo_pms_user
+    where 1=1 
+    <if test="sqlClause != null">
+      ${sqlClause}
+    </if>
+  </delete>
+  <update id="update">
+    <foreach collection="list" index="index" item="item" separator=";">
+      update edu_edmo_pms_user
+      <set>
+        <if test="item.version != null">
+          version = #{item.version,jdbcType=INTEGER},
+        </if>
+        <if test="item.createTime != null">
+          create_time = #{item.createTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="item.userNo != null">
+          user_no = #{item.userNo,jdbcType=VARCHAR},
+        </if>
+        <if test="item.userType != null">
+          user_type = #{item.userType,jdbcType=VARCHAR},
+        </if>
+        <if test="item.mainUserId != null">
+          main_user_id = #{item.mainUserId,jdbcType=BIGINT},
+        </if>
+        <if test="item.userPwd != null">
+          user_pwd = #{item.userPwd,jdbcType=VARCHAR},
+        </if>
+        <if test="item.userName != null">
+          user_name = #{item.userName,jdbcType=VARCHAR},
+        </if>
+        <if test="item.mobileNo != null">
+          mobile_no = #{item.mobileNo,jdbcType=VARCHAR},
+        </if>
+        <if test="item.email != null">
+          email = #{item.email,jdbcType=VARBINARY},
+        </if>
+        <if test="item.status != null">
+          status = #{item.status,jdbcType=INTEGER},
+        </if>
+        <if test="item.lastLoginTime != null">
+          last_login_time = #{item.lastLoginTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="item.isChangedPwd != null">
+          is_changed_pwd = #{item.isChangedPwd,jdbcType=INTEGER},
+        </if>
+        <if test="item.pwdErrorCount != null">
+          pwd_error_count = #{item.pwdErrorCount,jdbcType=INTEGER},
+        </if>
+        <if test="item.pwdErrorTime != null">
+          pwd_error_time = #{item.pwdErrorTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="item.remark != null">
+          remark = #{item.remark,jdbcType=VARCHAR},
+        </if>
+      </set>
+      where id = #{item.id,jdbcType=BIGINT}
+    </foreach>
+  </update>
+  <update id="updateBy">
+    update edu_edmo_pms_user
+    <set>
+      <if test="entity.version != null">
+        version = #{entity.version,jdbcType=INTEGER},
+      </if>
+      <if test="entity.createTime != null">
+        create_time = #{entity.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="entity.userNo != null">
+        user_no = #{entity.userNo,jdbcType=VARCHAR},
+      </if>
+      <if test="entity.userType != null">
+        user_type = #{entity.userType,jdbcType=VARCHAR},
+      </if>
+      <if test="entity.mainUserId != null">
+        main_user_id = #{entity.mainUserId,jdbcType=BIGINT},
+      </if>
+      <if test="entity.userPwd != null">
+        user_pwd = #{entity.userPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="entity.userName != null">
+        user_name = #{entity.userName,jdbcType=VARCHAR},
+      </if>
+      <if test="entity.mobileNo != null">
+        mobile_no = #{entity.mobileNo,jdbcType=VARCHAR},
+      </if>
+      <if test="entity.email != null">
+        email = #{entity.email,jdbcType=VARBINARY},
+      </if>
+      <if test="entity.status != null">
+        status = #{entity.status,jdbcType=INTEGER},
+      </if>
+      <if test="entity.lastLoginTime != null">
+        last_login_time = #{entity.lastLoginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="entity.isChangedPwd != null">
+        is_changed_pwd = #{entity.isChangedPwd,jdbcType=INTEGER},
+      </if>
+      <if test="entity.pwdErrorCount != null">
+        pwd_error_count = #{entity.pwdErrorCount,jdbcType=INTEGER},
+      </if>
+      <if test="entity.pwdErrorTime != null">
+        pwd_error_time = #{entity.pwdErrorTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="entity.remark != null">
+        remark = #{entity.remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where 1=1 
+    <if test="sqlClause != null">
+      ${sqlClause}
+    </if>
+  </update>
+  <select id="get" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from edu_edmo_pms_user
+    where id = #{id}
+  </select>
+  <select id="getList" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from edu_edmo_pms_user where 1=1 
+    <if test="sqlClause != null">
+      ${sqlClause}
+    </if>
+  </select>
+  <select id="count" parameterType="java.lang.String" resultType="java.lang.Long">
+    select count(*) from edu_edmo_pms_user where 1=1 
+    <if test="sqlClause != null">
+      ${sqlClause}
+    </if>
+  </select>
+  <select id="runSql" parameterType="java.lang.String" resultType="dao.model.PmsUser">
+    ${sql}
+  </select>
+</mapper>

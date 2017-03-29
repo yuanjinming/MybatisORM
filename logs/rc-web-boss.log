@@ -1,0 +1,73 @@
+[INFO ][20170329 12:00:26,383][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5e91993f: startup date [Wed Mar 29 12:00:26 CST 2017]; root of context hierarchy
+[INFO ][20170329 12:00:26,422][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170329 12:00:26,566][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20170329 12:00:26,699][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20170329 12:00:26,706][AutowiredAnnotationBeanPostProcessor:155] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ][20170329 12:00:27,515][DruidDataSource:715] {dataSource-1} inited
+[WARN ][20170329 12:00:27,526][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager' defined in class path resource [spring/spring-mybatis.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.zimeishe.dao.separate.DynamicDataSource] for bean with name 'dataSource' defined in class path resource [spring/spring-mybatis.xml]; nested exception is java.lang.ClassNotFoundException: com.zimeishe.dao.separate.DynamicDataSource
+[INFO ][20170329 12:00:27,529][DruidDataSource:1444] {dataSource-1} closed
+[INFO ][20170329 12:04:40,260][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5e91993f: startup date [Wed Mar 29 12:04:40 CST 2017]; root of context hierarchy
+[INFO ][20170329 12:04:40,295][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170329 12:04:40,446][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20170329 12:04:40,571][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20170329 12:04:40,576][AutowiredAnnotationBeanPostProcessor:155] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ][20170329 12:04:40,934][DruidDataSource:715] {dataSource-1} inited
+[INFO ][20170329 12:04:55,907][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5e91993f: startup date [Wed Mar 29 12:04:55 CST 2017]; root of context hierarchy
+[INFO ][20170329 12:04:55,944][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170329 12:04:56,088][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20170329 12:04:56,217][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20170329 12:04:56,223][AutowiredAnnotationBeanPostProcessor:155] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ][20170329 12:04:56,582][DruidDataSource:715] {dataSource-1} inited
+[INFO ][20170329 12:05:26,967][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5e91993f: startup date [Wed Mar 29 12:05:26 CST 2017]; root of context hierarchy
+[INFO ][20170329 12:05:27,002][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170329 12:05:27,147][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20170329 12:05:27,275][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20170329 12:05:27,281][AutowiredAnnotationBeanPostProcessor:155] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ][20170329 12:05:27,641][DruidDataSource:715] {dataSource-1} inited
+[WARN ][20170329 12:05:27,829][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pmsUserDao' defined in class path resource [spring/spring-mybatis.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [dao.Impl.PmsUserDaoImpl]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: 亲爱的程序猿，data-source.properties中没有找到实体“PmsUser”配置哦！
+[WARN ][20170329 12:05:27,829][DisposableBeanAdapter:374] Invocation of destroy method 'close' failed on bean with name 'sessionTemplate': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
+[INFO ][20170329 12:05:27,833][DruidDataSource:1444] {dataSource-1} closed
+[INFO ][20170329 12:55:04,009][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5e91993f: startup date [Wed Mar 29 12:55:04 CST 2017]; root of context hierarchy
+[INFO ][20170329 12:55:04,044][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170329 12:55:04,185][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20170329 12:55:04,322][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20170329 12:55:04,327][AutowiredAnnotationBeanPostProcessor:155] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ][20170329 12:55:04,736][DruidDataSource:715] {dataSource-1} inited
+[INFO ][20170329 12:55:52,109][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5e91993f: startup date [Wed Mar 29 12:55:52 CST 2017]; root of context hierarchy
+[INFO ][20170329 12:55:52,153][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170329 12:55:52,310][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20170329 12:55:52,447][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20170329 12:55:52,452][AutowiredAnnotationBeanPostProcessor:155] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ][20170329 12:55:52,832][DruidDataSource:715] {dataSource-1} inited
+[INFO ][20170329 12:55:53,171][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[INFO ][20170329 12:55:53,201][SQLErrorCodesFactory:126] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[INFO ][20170329 12:56:24,748][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5e91993f: startup date [Wed Mar 29 12:56:24 CST 2017]; root of context hierarchy
+[INFO ][20170329 12:56:24,784][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170329 12:56:24,931][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20170329 12:56:25,059][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20170329 12:56:25,063][AutowiredAnnotationBeanPostProcessor:155] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ][20170329 12:56:25,455][DruidDataSource:715] {dataSource-1} inited
+[INFO ][20170329 14:12:01,558][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5e91993f: startup date [Wed Mar 29 14:12:01 CST 2017]; root of context hierarchy
+[INFO ][20170329 14:12:01,592][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170329 14:12:01,735][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20170329 14:12:01,893][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20170329 14:12:01,901][AutowiredAnnotationBeanPostProcessor:155] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ][20170329 14:12:02,350][DruidDataSource:715] {dataSource-1} inited
+[INFO ][20170329 14:15:06,088][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@20398b7c: startup date [Wed Mar 29 14:15:06 CST 2017]; root of context hierarchy
+[INFO ][20170329 14:15:06,130][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170329 14:15:06,306][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20170329 14:15:06,535][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20170329 14:15:06,559][AutowiredAnnotationBeanPostProcessor:155] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ][20170329 14:15:06,979][DruidDataSource:715] {dataSource-1} inited
+[INFO ][20170329 14:16:38,196][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5e91993f: startup date [Wed Mar 29 14:16:38 CST 2017]; root of context hierarchy
+[INFO ][20170329 14:16:38,231][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170329 14:16:38,375][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20170329 14:16:38,515][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20170329 14:16:38,532][AutowiredAnnotationBeanPostProcessor:155] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ][20170329 14:16:39,007][DruidDataSource:715] {dataSource-1} inited
+[INFO ][20170329 14:17:35,694][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@20398b7c: startup date [Wed Mar 29 14:17:35 CST 2017]; root of context hierarchy
+[INFO ][20170329 14:17:35,732][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20170329 14:17:35,890][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20170329 14:17:36,045][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20170329 14:17:36,064][AutowiredAnnotationBeanPostProcessor:155] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ][20170329 14:17:36,549][DruidDataSource:715] {dataSource-1} inited
